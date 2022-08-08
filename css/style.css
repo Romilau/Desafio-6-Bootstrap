@@ -12,23 +12,9 @@
    
     
 }
-.topnav{
 
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: space-between;
-     
-}
     
-a{
-    color:rgb(167, 145, 111);
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    display: flex;
-    flex-direction: row;
-    text-decoration: none;
-    
-  }
+
 
   
 .logo{
@@ -40,52 +26,33 @@ a{
 }
 
 
-.buscador{
-display: flex;
-flex-direction: row;
-justify-content: flex-end;
-
-}
-
-.lupa{
-    height: 30px;
-    width:30px;
-    
-   }
-
-.open-menu,
-.close-menu {
-    display:none;
-}
-
-
-
-
 
 h1 div{
-    display:block;
+    display:flex;
     text-align: center;
+    justify-content: center;
     background-color:rgb(245, 224, 191);
     color: rgb(167, 145, 111);
     font-weight: 100;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-   
+   font-size:x-large;
 }
-
-
 
 
 
 body{
     background-color: white;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-
+    padding: 10%;
 }
+
+
 
 
 section article{
     background-color: white;
     align-items: center;
+  
 
 }
 
@@ -116,11 +83,8 @@ section article{
     z-index: 1;
 }
 
-.redes{
-    width: 3%;
-    height: 3%;
-    
-}
+
+
  
     footer div{
         
@@ -154,11 +118,7 @@ text-align: center;
         text-align:center;
     }
 
-    .fotoEquipo{
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-    }
+
 
 
 
@@ -229,10 +189,6 @@ background-color: #c7bba0;
     display: flex;
     justify-content: center;
 
-    
-    
-
-
 }
 
 
@@ -247,23 +203,35 @@ background-color: #c7bba0;
         justify-content: space-between;
     }
     
-    .menu{
-        display:none;
+    .redes{
+        width: 10%;
+        height: 10%;
+        
     }
-
-    .buscador{
-    display: flex;
-    justify-content: end;
+    .accordion {
+        padding: 1%;
     }
-
-    .menuBurguer{
-        display:block;
-        height: 60px;
-        width: 60px;
-        order: -1;
-    }
+  
+    h1 div{
+        display:flex;
+        text-align: center;
+        background-color:rgb(245, 224, 191);
+        color: rgb(167, 145, 111);
+        font-size: large;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        
          
     }
+    .descuento{
+        
+        padding: 8%;
+        margin: 10%;
+
+    }
+
+    
+}
+
 
 
 
@@ -282,8 +250,14 @@ background-color: #c7bba0;
         list-style: none;
     }
 
-    .menuBurguer{
-        display: none;
+    .descuento{
+        
+        padding: 2%;
+    }
+    .redes{
+        width: 3%;
+        height: 10%;
+        
     }
 }
 
@@ -295,6 +269,10 @@ background-color: #c7bba0;
     color: #c7bba0;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
+.container-fluid{
+    background-color:#c7bba0; 
+}
+
 
 .nav-link {
     color: #c7bba0;
