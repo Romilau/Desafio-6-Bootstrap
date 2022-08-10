@@ -1,0 +1,240 @@
+$color_1: rgb(167, 145, 111);
+$color_2: #c7bba0;
+$font-family_1: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+$font-family_2: Arial, Helvetica, sans-serif;
+$background-color_1: rgb(167, 145, 111);
+$background-color_2: #c7bba0;
+
+* {
+	margin: 5;
+	padding: 5;
+	box-sizing: border-box;
+}
+.body {
+	font-family: $font-family_1;
+}
+h1 {
+	div {
+		display: flex;
+		text-align: center;
+		color: $color_1;
+		font-weight: 100;
+		font-family: $font-family_1;
+	}
+	display: flex;
+	justify-content: center;
+}
+.nav {
+	display: flex;
+	flex-direction: row;
+	justify-items: flex-start;
+	justify-content: space-between;
+}
+.logo {
+	height: 150px;
+	width: 150px;
+	display: flex;
+	justify-content: center;
+	margin: 0;
+	padding: 0;
+	border-radius: 80%;
+}
+a {
+	color: $color_1;
+	font-family: $font-family_1;
+	display: flex;
+	flex-direction: row;
+	text-decoration: none;
+	justify-content: space-between;
+}
+.buscador {
+	display: flex;
+	flex-direction: row;
+	height: 40px;
+	justify-content: space-around;
+	margin-top: 2%;
+}
+.lupa {
+	height: 30px;
+	width: 30px;
+	margin: 8px;
+}
+.tienda {
+	color: $color_2;
+	display: flex;
+	justify-content: center;
+}
+article {
+	img {
+		height: 200px;
+		width: 200px;
+	}
+}
+button {
+	font-family: $font-family_2;
+}
+.espejos {
+	grid-area: espejos;
+}
+.estanterias {
+	grid-area: estanterias;
+}
+.escritorios {
+	grid-area: escritorios;
+}
+.mesas {
+	grid-area: mesas;
+}
+.sofas {
+	grid-area: sofas;
+}
+.sillas {
+	grid-area: sillas;
+}
+.main {
+	img {
+		margin: 20px;
+	}
+}
+.footer {
+	color: $color_2;
+	margin-top: 100px;
+	a {
+		display: flex;
+		justify-content: center;
+		color: $color_2;
+		font-family: $font-family_1;
+		font-weight: 600;
+		font-size: large;
+		text-decoration: none;
+	}
+}
+img {
+	filter: grayscale(20%);
+	transition: all 2s;
+	&:hover {
+		filter: grayscale(0);
+		transform: scale(1.5);
+		overflow: hidden;
+	}
+}
+.logoWhatsaap {
+	position: fixed;
+	left: 15px;
+	bottom: 15px;
+	z-index: 1;
+}
+.footerRedes {
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+}
+@media screen and (min-width: 320px) {
+	#galeriaFotos {
+		display: grid;
+		grid-template-columns: auto;
+		grid-template-rows: repeat(1, auto);
+		grid-template-areas: "estanterias" "escritorios" "mesas" "espejos" "sofas" "sillas";
+		column-gap: 100px;
+		row-gap: 10px;
+	}
+	section {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+	.escritorios {
+		display: grid;
+		grid-template-columns: auto;
+		grid-template-rows: repeat(1,fr);
+		justify-items: center;
+		grid-template-areas: "estanterias" "escritorios" "mesas" "espejos" "sofas" "sillas";
+	}
+	.espejos {
+		display: grid;
+		grid-template-columns: auto;
+		grid-template-rows: repeat(1,fr);
+		justify-items: center;
+		grid-template-areas: "estanterias" "escritorios" "mesas" "espejos" "sofas" "sillas";
+	}
+	.estanterias {
+		display: grid;
+		grid-template-columns: auto;
+		grid-template-rows: repeat(1,fr);
+		justify-items: center;
+		grid-template-areas: "estanterias" "escritorios" "mesas" "espejos" "sofas" "sillas";
+	}
+	.mesas {
+		display: grid;
+		grid-template-columns: auto;
+		grid-template-rows: repeat(1,fr);
+		justify-items: center;
+		grid-template-areas: "estanterias" "escritorios" "mesas" "espejos" "sofas" "sillas";
+	}
+	.sofas {
+		display: grid;
+		grid-template-columns: auto;
+		grid-template-rows: repeat(1,fr);
+		justify-items: center;
+		grid-template-areas: "estanterias" "escritorios" "mesas" "espejos" "sofas" "sillas";
+	}
+	.sillas {
+		display: grid;
+		grid-template-columns: auto;
+		grid-template-rows: repeat(1,fr);
+		justify-items: center;
+		grid-template-areas: "estanterias" "escritorios" "mesas" "espejos" "sofas" "sillas";
+	}
+	#menu {
+		display: none;
+	}
+	h2 {
+		font-family: $font-family_1;
+		text-transform: uppercase;
+		color: $color_1;
+		font-size: smaller;
+	}
+	.menuhamburguesa {
+		display: block;
+		height: 60px;
+		width: 60px;
+		order: -1;
+	}
+}
+@media screen and (min-width: 1200px) {
+	#galeriaFotos {
+		background-color: $background-color_1;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: repeat(6, auto);
+		grid-template-areas: "estanterias estanterias estanterias" "escritorios escritorios escritorios" "mesas mesas mesas" "espejos espejos espejos" "sofas sofas sofas" "sillas sillas sillas";
+		column-gap: 40px;
+		row-gap: 20px;
+		padding: 0%;
+	}
+	a {
+		color: $color_1;
+		font-family: $font-family_1;
+		display: flex;
+		flex-direction: row;
+		text-decoration: none;
+		justify-content: space-between;
+	}
+	#menu {
+		display: flex;
+		list-style: none;
+		justify-content: space-between;
+		div {
+			background-color: $background-color_2;
+			margin: 10px;
+			padding: 10px;
+			height: 55px;
+			width: 95px;
+			display: flex;
+			justify-content: center;
+		}
+	}
+	h2 {
+		color: $color_1;
+	}
+}

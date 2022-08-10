@@ -1,278 +1,253 @@
-*{
-   
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 5;
+  padding: 5;
+  box-sizing: border-box;
 }
 
-
-
-.body{
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-   
+.body {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
 }
 
-
-h1{
-    display: flex;
-    justify-content: center;
+h1 {
+  display: flex;
+  justify-content: center;
+}
+h1 div {
+  display: flex;
+  text-align: center;
+  color: rgb(167, 145, 111);
+  font-weight: 100;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
 }
 
-
-
-.logo{
-    
-        height: 100px;
-        width: 100px;
-        display: flex;
-        border-radius: 80%;
-        
-    
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-items: flex-start;
+  justify-content: space-between;
 }
 
-
-
-
-
-
-.tienda{
-    color: #c7bba0;
-    display: flex;
-    justify-content: center;
-   
+.logo {
+  height: 150px;
+  width: 150px;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  border-radius: 80%;
 }
 
-article img{
-    height: 200px;
-    width: 200px;
+a {
+  color: rgb(167, 145, 111);
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  display: flex;
+  flex-direction: row;
+  text-decoration: none;
+  justify-content: space-between;
 }
 
-
-button{
-    
-    /*background-color: rgb(167, 145, 111);*/
-    font-family:Arial, Helvetica, sans-serif;
-   
-    
+.buscador {
+  display: flex;
+  flex-direction: row;
+  height: 40px;
+  justify-content: space-around;
+  margin-top: 2%;
 }
 
-
-
-.espejos{
-grid-area: espejos;
-
+.lupa {
+  height: 30px;
+  width: 30px;
+  margin: 8px;
 }
 
-.estanterias{
-grid-area: estanterias;
+.tienda {
+  color: #c7bba0;
+  display: flex;
+  justify-content: center;
 }
 
-.escritorios{
-grid-area: escritorios;
+article img {
+  height: 200px;
+  width: 200px;
 }
 
-.mesas{
-grid-area: mesas;
-}
-.sofas{
-grid-area: sofas;
+button {
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-.sillas{
-grid-area: sillas;
+.espejos {
+  grid-area: espejos;
 }
 
-.main img{
-    margin: 20px;
+.estanterias {
+  grid-area: estanterias;
 }
 
-
-.footer{
-    
-    color: #c7bba0;
-   
+.escritorios {
+  grid-area: escritorios;
 }
 
+.mesas {
+  grid-area: mesas;
+}
 
+.sofas {
+  grid-area: sofas;
+}
 
+.sillas {
+  grid-area: sillas;
+}
 
+.main img {
+  margin: 20px;
+}
 
+.footer {
+  color: #c7bba0;
+  margin-top: 100px;
+}
+.footer a {
+  display: flex;
+  justify-content: center;
+  color: #c7bba0;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-weight: 600;
+  font-size: large;
+  text-decoration: none;
+}
 
 img {
-    
-        filter: grayscale(20%);
-        transition: all 2s;
-       
+  filter: grayscale(20%);
+  transition: all 2s;
 }
-   section img:hover{
-        filter: opacity(.5);
-        transform: scale(1.2);
-        overflow: hidden;
-    
+img:hover {
+  filter: grayscale(0);
+  transform: scale(1.5);
+  overflow: hidden;
 }
 
-section img{
-    display: flex;
-    margin-left: 25% ;
+.logoWhatsaap {
+  position: fixed;
+  left: 15px;
+  bottom: 15px;
+  z-index: 1;
 }
 
-
-.footer a{
-    display: flex;
-    justify-content: center;
-  color: #c7bba0;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-weight:600;
-    font-size:large;
-    text-decoration: none;
+.footerRedes {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
 }
-
-
-
- .logoWhatsaap{
-    
-    position: fixed;
-    left: 15px;
-    bottom: 15px;
-    z-index: 1;
-}
-
-.footerRedes{
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-}
-
-.footer{
-    margin-top: 100px;
-}
-
-
 
 @media screen and (min-width: 320px) {
-    
-    #galeriaFotos{
-        
-        display:grid;
-        grid-template-columns: auto;
-        grid-template-rows: repeat(1, auto);
-        grid-template-areas: "estanterias" "escritorios" "mesas" "espejos" "sofas" "sillas";
-        column-gap: 100px;
-        row-gap: 10px; 
-   
-}
-
-section{
-    display:flex;
+  #galeriaFotos {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(1, auto);
+    grid-template-areas: "estanterias" "escritorios" "mesas" "espejos" "sofas" "sillas";
+    -moz-column-gap: 100px;
+         column-gap: 100px;
+    row-gap: 10px;
+  }
+  section {
+    display: flex;
     flex-direction: column;
     justify-content: center;
-    
-}
-
-.tienda{
-    color: #c7bba0;
-    display: block;
-    justify-content: center;
-    padding: 25%;
-}
-
-
-
-.escritorios,
-.espejos,
-.estanterias,
-.mesas,
-.sofas,
-.sillas{
-    display:grid;
+  }
+  .escritorios {
+    display: grid;
     grid-template-columns: auto;
-    grid-template-rows: repeat(1,fr);
+    grid-template-rows: repeat(1, fr);
     justify-items: center;
     grid-template-areas: "estanterias" "escritorios" "mesas" "espejos" "sofas" "sillas";
-    
-}
-
-
-h2{
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+  .espejos {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(1, fr);
+    justify-items: center;
+    grid-template-areas: "estanterias" "escritorios" "mesas" "espejos" "sofas" "sillas";
+  }
+  .estanterias {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(1, fr);
+    justify-items: center;
+    grid-template-areas: "estanterias" "escritorios" "mesas" "espejos" "sofas" "sillas";
+  }
+  .mesas {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(1, fr);
+    justify-items: center;
+    grid-template-areas: "estanterias" "escritorios" "mesas" "espejos" "sofas" "sillas";
+  }
+  .sofas {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(1, fr);
+    justify-items: center;
+    grid-template-areas: "estanterias" "escritorios" "mesas" "espejos" "sofas" "sillas";
+  }
+  .sillas {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(1, fr);
+    justify-items: center;
+    grid-template-areas: "estanterias" "escritorios" "mesas" "espejos" "sofas" "sillas";
+  }
+  #menu {
+    display: none;
+  }
+  h2 {
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
     text-transform: uppercase;
-    color:  rgb(167, 145, 111);
+    color: rgb(167, 145, 111);
     font-size: smaller;
-    
+  }
+  .menuhamburguesa {
+    display: block;
+    height: 60px;
+    width: 60px;
+    order: -1;
+  }
 }
-
-
-
-}
-
-
-    
-
 @media screen and (min-width: 1200px) {
-
-    
-    #galeriaFotos {
-    background-color:rgb(167, 145, 111);
-    display:grid;
+  #galeriaFotos {
+    background-color: rgb(167, 145, 111);
+    display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(6, auto);
     grid-template-areas: "estanterias estanterias estanterias" "escritorios escritorios escritorios" "mesas mesas mesas" "espejos espejos espejos" "sofas sofas sofas" "sillas sillas sillas";
-    column-gap: 40px;
+    -moz-column-gap: 40px;
+         column-gap: 40px;
     row-gap: 20px;
-    
-   
-    
-
-} 
-
-
-
-h2{
-    color: rgb(255, 255, 255);
-
-}
-
-
-
-
-.tienda{
-    color: #c7bba0;
+    padding: 0%;
+  }
+  a {
+    color: rgb(167, 145, 111);
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+    justify-content: space-between;
+  }
+  #menu {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+  }
+  #menu div {
+    background-color: #c7bba0;
+    margin: 10px;
+    padding: 10px;
+    height: 55px;
+    width: 95px;
     display: flex;
     justify-content: center;
-    height: 30px;
-    padding: 10%;
-   
-}
-
-
-}
-    
-
-/*CSS PARA BOOTSTRAP*/
-
-.offcanvas-title{
-    color: #c7bba0;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-
-.nav-link {
-    color: #c7bba0;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-
-.nav-item {
-    color: #c7bba0;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-
-.dropdown-item{
-    color: #c7bba0;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    text-transform: uppercase;
-}
-
-.btn {
-    color: #c7bba0;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-
+  }
+  h2 {
+    color: rgb(167, 145, 111);
+  }
+}/*# sourceMappingURL=grid.css.map */
