@@ -1,11 +1,13 @@
+
 * {
-  margin: 5;
-  padding: 5;
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
 .body {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  color: #c7bba0;
 }
 
 h1 {
@@ -46,24 +48,13 @@ a {
   justify-content: space-between;
 }
 
-.buscador {
-  display: flex;
-  flex-direction: row;
-  height: 40px;
-  justify-content: space-around;
-  margin-top: 2%;
-}
-
-.lupa {
-  height: 30px;
-  width: 30px;
-  margin: 8px;
-}
-
 .tienda {
   color: #c7bba0;
+  background-color: rgb(167, 145, 111);
   display: flex;
   justify-content: center;
+  padding: 15%;
+  width: 100%;
 }
 
 article img {
@@ -118,12 +109,12 @@ button {
 }
 
 img {
-  filter: grayscale(20%);
-  transition: all 2s;
+  filter: grayscale(0%);
+  transition: all 1s;
 }
 img:hover {
-  filter: grayscale(0);
-  transform: scale(1.5);
+  filter: grayscale(100%);
+  transform: scale(1.1);
   overflow: hidden;
 }
 
@@ -149,10 +140,6 @@ img:hover {
     -moz-column-gap: 100px;
          column-gap: 100px;
     row-gap: 10px;
-  }
-  section {
-    display: flex;
-    flex-direction: column;
     justify-content: center;
   }
   .escritorios {
@@ -206,12 +193,6 @@ img:hover {
     color: rgb(167, 145, 111);
     font-size: smaller;
   }
-  .menuhamburguesa {
-    display: block;
-    height: 60px;
-    width: 60px;
-    order: -1;
-  }
 }
 @media screen and (min-width: 1200px) {
   #galeriaFotos {
@@ -223,7 +204,14 @@ img:hover {
     -moz-column-gap: 40px;
          column-gap: 40px;
     row-gap: 20px;
-    padding: 0%;
+    justify-content: center;
+    margin: 5%;
+  }
+  article {
+    margin: 10%;
+  }
+  article h2 {
+    color: #c7bba0;
   }
   a {
     color: rgb(167, 145, 111);

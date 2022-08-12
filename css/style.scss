@@ -132,6 +132,10 @@ footer {
 	display: flex;
 	justify-content: center;
 }
+
+
+
+
 .offcanvas-title {
 	color: $color_2;
 	font-family: $font-family_2;
@@ -156,15 +160,42 @@ footer {
 	color: $color_2;
 	font-family: $font-family_2;
 }
-.accordion-header {
-	font-weight: 300;
-	font-family: $font-family_1;
-	font-style: normal;
-	text-transform: uppercase;
+
+
+
+/*@mixin accordion ($fuente, $color){
+	/*$font-family, $color, font-weight, text-transform, text-align
 	color: $color_2;
-	font-size: 30px;
-	text-align: center;
+	font-family: $font-family_1;
+	font-weight: $fontweight1;
+	text-transform: $texttransform1;
+	text-align: $textalign1;
+} */
+
+$estilosaccordion: (color: #c7bba0, font-family: $font-family_1, font-weight: 300, text-transform: uppercase, text-align: center ) ;
+
+@mixin estilosaccordion ($estilosaccordion) {
+	color: map-get($estilosaccordion, "color");
+	font-family: map-get($estilosaccordion, "font-family") ;
+	font-weight: map-get($estilosaccordion, "font-weight" );
+	text-transform: map-get($estilosaccordion, "text-transform" );
+	text-align: map-get($estilosaccordion, "text-align");
 }
+
+.accordion-header {
+	@include estilosaccordion($estilosaccordion);
+	font-style: normal;
+	font-size: 30px;
+	
+}
+
+.accordion-button {
+	@include estilosaccordion($estilosaccordion);
+	font-style: normal;
+	font-size: 30px;
+	
+}
+
 .accordion-body {
 	font-weight: 100;
 	font-size: 20px;
@@ -172,16 +203,7 @@ footer {
 	font-style: normal;
 	background-color: $background-color_4;
 	color: $color_5;
-	text-align: center;
-}
-.accordion-button {
-	font-weight: 300;
-	font-family: $font-family_1;
-	font-style: normal;
-	text-transform: uppercase;
-	color: $color_2;
-	font-size: 30px;
-	text-align: center;
+	text-align: $textalign1;
 }
 @media screen and (min-width: 320px) {
 	.topnav {

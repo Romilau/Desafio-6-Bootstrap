@@ -6,12 +6,13 @@ $background-color_1: rgb(167, 145, 111);
 $background-color_2: #c7bba0;
 
 * {
-	margin: 5;
-	padding: 5;
+	margin: 0;
+	padding: 0;
 	box-sizing: border-box;
 }
 .body {
 	font-family: $font-family_1;
+    color:$background-color_2;
 }
 h1 {
 	div {
@@ -47,23 +48,38 @@ a {
 	text-decoration: none;
 	justify-content: space-between;
 }
-.buscador {
-	display: flex;
-	flex-direction: row;
-	height: 40px;
-	justify-content: space-around;
-	margin-top: 2%;
-}
-.lupa {
-	height: 30px;
-	width: 30px;
-	margin: 8px;
-}
+
+
 .tienda {
 	color: $color_2;
+    background-color: $color_1;
 	display: flex;
 	justify-content: center;
+    padding: 15%;
+    width: 100%;
+	height: 100%;
+	
+   
+   
+    
 }
+
+.offcanvas-title {
+	color: $color_2;
+	font-family: $font-family_2;
+}
+.container-fluid {
+	background-color: $background-color_4;
+}
+.nav-link {
+	color: $color_2;
+	font-family: $font-family_2;
+}
+.nav-item {
+	color: $color_2;
+	font-family: $font-family_2;
+}
+
 article {
 	img {
 		height: 200px;
@@ -110,11 +126,11 @@ button {
 	}
 }
 img {
-	filter: grayscale(20%);
-	transition: all 2s;
+	filter: grayscale(0%);
+	transition: all 1s;
 	&:hover {
-		filter: grayscale(0);
-		transform: scale(1.5);
+		filter: grayscale(100%);
+		transform: scale(1.1);
 		overflow: hidden;
 	}
 }
@@ -137,12 +153,9 @@ img {
 		grid-template-areas: "estanterias" "escritorios" "mesas" "espejos" "sofas" "sillas";
 		column-gap: 100px;
 		row-gap: 10px;
-	}
-	section {
-		display: flex;
-		flex-direction: column;
 		justify-content: center;
 	}
+	
 	.escritorios {
 		display: grid;
 		grid-template-columns: auto;
@@ -194,12 +207,7 @@ img {
 		color: $color_1;
 		font-size: smaller;
 	}
-	.menuhamburguesa {
-		display: block;
-		height: 60px;
-		width: 60px;
-		order: -1;
-	}
+	
 }
 @media screen and (min-width: 1200px) {
 	#galeriaFotos {
@@ -210,7 +218,15 @@ img {
 		grid-template-areas: "estanterias estanterias estanterias" "escritorios escritorios escritorios" "mesas mesas mesas" "espejos espejos espejos" "sofas sofas sofas" "sillas sillas sillas";
 		column-gap: 40px;
 		row-gap: 20px;
-		padding: 0%;
+		justify-content: center;
+		margin: 50%;
+	}
+	article{
+		margin: 30%;
+		h2{
+			color:$color_5;
+			margin: 100%;
+		}
 	}
 	a {
 		color: $color_1;
@@ -234,7 +250,5 @@ img {
 			justify-content: center;
 		}
 	}
-	h2 {
-		color: $color_1;
-	}
+	
 }
